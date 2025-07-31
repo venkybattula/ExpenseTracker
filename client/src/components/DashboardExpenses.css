@@ -1,0 +1,146 @@
+.dashboard-expense-container {
+  padding: 2rem;
+  background: #f5f7fa;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.filters select,
+.filters input {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.clear-btn {
+  background: #ff4d4f;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clear-btn:hover {
+  background-color: #e04344;
+}
+
+.expense-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.expense-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.expense-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.expense-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.expense-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin: 0;
+}
+
+.expense-meta {
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.category-badge {
+  background-color: #e4e7ec;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 0.75rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.expense-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.amount.zero {
+  color: #f44336;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.edit,
+.delete {
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.edit:hover {
+  background-color: #1976d2;
+}
+
+.delete {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.delete:hover {
+  background-color: #c62828;
+}
+
+.no-expenses {
+  color: #999;
+  font-style: italic;
+  padding: 1rem;
+}

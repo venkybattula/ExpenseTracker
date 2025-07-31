@@ -1,0 +1,63 @@
+.expense-container {
+  padding: 2rem;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.expense-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn {
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn.danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn.small {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+}
+
+.form-container {
+  padding: 2rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-form input {
+  margin-bottom: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

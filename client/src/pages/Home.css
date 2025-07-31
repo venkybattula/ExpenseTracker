@@ -1,0 +1,104 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1e293b, #0f172a); /* dark gradient */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.welcome-box {
+  background-color: #111827;
+  color: #f9fafb;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  text-align: center;
+}
+
+.welcome-box h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.welcome-box p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.cta-buttons a {
+  padding: 14px 28px;
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-buttons a:hover {
+  background-color: #2563eb;
+}
+
+
+
+
+
+.navbar {
+  background-color: #1e1e2f;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00f2fe;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  transition: transform 0.2s ease;
+}
+
+.navbar-links li:hover {
+  transform: scale(1.1);
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #00f2fe;
+}

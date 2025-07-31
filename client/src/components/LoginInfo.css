@@ -1,0 +1,20 @@
+.login-info-box {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  padding: 1rem;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 1rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-info-box h3 {
+  margin-top: 0;
+  color: #374151;
+}
+
+.login-info-box p {
+  margin: 6px 0;
+  color: #4b5563;
+}
