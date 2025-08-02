@@ -202,3 +202,4 @@ const AppRoutes = () => {
     </>
   );
 };
+export default App;
