@@ -10,7 +10,6 @@ const CategoryExpenseChart = ({ expenses }) => {
   const [selectedMonth, setSelectedMonth] = useState('');
   const [selectedYear, setSelectedYear] = useState('');
 
-  // Extract filtered expenses
   const filteredExpenses = useMemo(() => {
     return expenses.filter((expense) => {
       const date = new Date(expense.createdAt);
