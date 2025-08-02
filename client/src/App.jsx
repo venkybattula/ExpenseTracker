@@ -118,7 +118,7 @@ import RedirectIfLoggedIn from './components/RedirectIfLoggedIn';
 // );
 
 // export default App;
-const AppRoutes = () => {
+const App = () => {
   const token = localStorage.getItem('token');
 
   return (
