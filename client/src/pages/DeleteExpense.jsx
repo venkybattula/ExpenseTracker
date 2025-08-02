@@ -7,14 +7,14 @@ const DeleteExpense = () => {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/expenses', {
+    axios.get(`${process.env.REACT_APP_API_URL}/api/expenses`, {
       headers: { Authorization: `Bearer ${token}` }
     }).then(res => setExpenses(res.data));
   }, [token]);
 
   const deleteExpense = async (id) => {
     if (window.confirm('Are you sure you want to delete this expense?')) {
-      await axios.delete(`http://localhost:5000/api/expenses/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/expenses/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('Deleted successfully');

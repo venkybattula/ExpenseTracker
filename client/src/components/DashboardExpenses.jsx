@@ -30,7 +30,7 @@ const DashboardExpenses = () => {
 
   const fetchExpenses = useCallback(async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/expenses', {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/expenses`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setExpenses(res.data);
@@ -50,7 +50,7 @@ const DashboardExpenses = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/expenses/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/expenses/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchExpenses();

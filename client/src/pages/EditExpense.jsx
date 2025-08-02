@@ -19,7 +19,7 @@ const EditExpense = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/expenses/${id}`, {
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/expenses/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
