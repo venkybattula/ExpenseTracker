@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Register.css'; // Make sure this CSS has the updated styles
 
 const Register = () => {
@@ -124,7 +125,7 @@ const Register = () => {
 
         <p className="login-redirect">
           Already have an account?
-          <li><Link to="/login">Login</Link></li>
+          <Link to="/login">Login</Link>
         </p>
       </div>
     </div>
