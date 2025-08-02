@@ -14,26 +14,118 @@ import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import RedirectIfLoggedIn from './components/RedirectIfLoggedIn';
 
-const AppRoutes = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const token = localStorage.getItem('token');
+// const AppRoutes = () => {
+//   const location = useLocation();
+//   const navigate = useNavigate();
+//   const token = localStorage.getItem('token');
 
-  useEffect(() => {
-    // 🔒 Redirect logged-in users away from public routes
-    if (
-      token &&
-      ['/login', '/register', '/about', '/'].includes(location.pathname)
-    ) {
-      navigate('/add-expense', { replace: true });
-    }
-  }, [location, token, navigate]);
+//   useEffect(() => {
+//     // 🔒 Redirect logged-in users away from public routes
+//     if (
+//       token &&
+//       ['/login', '/register', '/about', '/'].includes(location.pathname)
+//     ) {
+//       navigate('/add-expense', { replace: true });
+//     }
+//   }, [location, token, navigate]);
+
+//   return (
+//     <>
+//       <Navbar />
+//       <Routes>
+//         {/* Public Pages (with redirect protection) */}
+//         <Route
+//           path="/"
+//           element={
+//             <RedirectIfLoggedIn>
+//               <Home />
+//             </RedirectIfLoggedIn>
+//           }
+//         />
+//         <Route
+//           path="/about"
+//           element={
+//             <RedirectIfLoggedIn>
+//               <About />
+//             </RedirectIfLoggedIn>
+//           }
+//         />
+//         <Route
+//           path="/login"
+//           element={
+//             <RedirectIfLoggedIn>
+//               <Login />
+//             </RedirectIfLoggedIn>
+//           }
+//         />
+//         <Route
+//           path="/register"
+//           element={
+//             <RedirectIfLoggedIn>
+//               <Register />
+//             </RedirectIfLoggedIn>
+//           }
+//         />
+
+//         {/* Private Routes */}
+//         <Route
+//           path="/dashboard"
+//           element={
+//             <ProtectedRoute>
+//               <Dashboard />
+//             </ProtectedRoute>
+//           }
+//         />
+//         <Route
+//           path="/add-expense"
+//           element={
+//             <ProtectedRoute>
+//               <AddExpense />
+//             </ProtectedRoute>
+//           }
+//         />
+//         <Route
+//           path="/edit-expense/:id"
+//           element={
+//             <ProtectedRoute>
+//               <EditExpense />
+//             </ProtectedRoute>
+//           }
+//         />
+//         <Route
+//           path="/tracker"
+//           element={
+//             <ProtectedRoute>
+//               <Tracker />
+//             </ProtectedRoute>
+//           }
+//         />
+
+//         {/* Fallback */}
+//         <Route
+//           path="*"
+//           element={<Navigate to={token ? '/add-expense' : '/'} replace />}
+//         />
+//       </Routes>
+//     </>
+//   );
+// };
+
+// const App = () => (
+//   <Router>
+//     <AppRoutes />
+//   </Router>
+// );
+
+// export default App;
+const AppRoutes = () => {
+  const token = localStorage.getItem('token');
 
   return (
     <>
       <Navbar />
       <Routes>
-        {/* Public Pages (with redirect protection) */}
+        {/* Public Pages */}
         <Route
           path="/"
           element={
@@ -67,7 +159,7 @@ const AppRoutes = () => {
           }
         />
 
-        {/* Private Routes */}
+        {/* Protected Routes */}
         <Route
           path="/dashboard"
           element={
@@ -110,11 +202,3 @@ const AppRoutes = () => {
     </>
   );
 };
-
-const App = () => (
-  <Router>
-    <AppRoutes />
-  </Router>
-);
-
-export default App;
