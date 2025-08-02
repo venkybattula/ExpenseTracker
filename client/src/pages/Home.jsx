@@ -12,8 +12,8 @@ const Home = () => {
         <p>Track, manage, and analyze your expenses easily and effectively.</p>
         <p>Organize your finances with visual insights, category breakdowns, and simple reports.</p>
         <div className="cta-buttons">
-            <Link to="/login">Login</Link>
-            <Link to="/about">Login</Link>
+            <Link to="/login">Get Started</Link>
+            <Link to="/about">Learn More</Link>
           
         </div>
       </div>
