@@ -119,6 +119,8 @@ import RedirectIfLoggedIn from './components/RedirectIfLoggedIn';
 
 // export default App;
 const App = () => {
+   const location = useLocation();
+   const navigate = useNavigate();
   const token = localStorage.getItem('token');
 
   return (
