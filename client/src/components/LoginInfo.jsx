@@ -1,6 +1,7 @@
 // src/components/LoginInfo.jsx
 import React, { useEffect, useState } from 'react';
 import './LoginInfo.css'; // optional styling
+import axios from 'axios';
 
 const LoginInfo = () => {
   const [user, setUser] = useState(null);
