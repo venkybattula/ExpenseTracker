@@ -20,7 +20,7 @@ const Dashboard = () => {
 
   const fetchExpenses = useCallback(async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/expenses`, {
+      const res = await axios.get('https://expensetracker-1-e5sj.onrender.com/api/expenses', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

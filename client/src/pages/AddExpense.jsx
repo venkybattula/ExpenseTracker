@@ -20,7 +20,7 @@ const AddExpense = () => {
 console.log(token);
   const fetchExpenses = useCallback(async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/expenses`, {
+      const res = await axios.get(`https://expensetracker-1-e5sj.onrender.com/api/auth/expenses`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setExpenses(res.data);
@@ -41,12 +41,12 @@ const handleSubmit = async (e) => { // ✅ async added here
   e.preventDefault();
   try {
     if (isEditing) {
-      await axios.put(`${process.env.REACT_APP_API_URL}/api/expenses/${editId}`, formData, {
+      await axios.put(`https://expensetracker-1-e5sj.onrender.com/api/expenses/${editId}`, formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('✅ Expense Updated!');
     } else {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/expenses`, formData, {
+      await axios.post(`https://expensetracker-1-e5sj.onrender.com/api/expenses/${id}`, formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('✅ Expense Added & Email Sent!');
@@ -81,9 +81,10 @@ const handleSubmit = async (e) => { // ✅ async added here
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${process.env.REACT_APP_API_URL}/api/expenses/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+    await axios.delete(`https://expensetracker-1-e5sj.onrender.com/api/expenses/${id}`, {
+  headers: { Authorization: `Bearer ${token}` },
+});
+
       toast.error('🗑️ Expense Deleted!');
       fetchExpenses();
     } catch (err) {

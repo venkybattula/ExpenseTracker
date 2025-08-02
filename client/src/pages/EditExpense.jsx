@@ -19,7 +19,7 @@ const EditExpense = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/expenses/${id}`, {
+        const res = await axios.get(`https://expensetracker-1-e5sj.onrender.com/api/expenses/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -39,7 +39,7 @@ const EditExpense = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/expenses/${id}`, formData, {
+      await axios.put(`https://expensetracker-1-e5sj.onrender.com/api/expenses/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
