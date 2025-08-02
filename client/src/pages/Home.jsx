@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+
 import './Home.css';
 
 const Home = () => {
@@ -10,8 +12,9 @@ const Home = () => {
         <p>Track, manage, and analyze your expenses easily and effectively.</p>
         <p>Organize your finances with visual insights, category breakdowns, and simple reports.</p>
         <div className="cta-buttons">
-          <a href="/login">Get Started</a>
-          <a href="/about">Learn More</a>
+            <Link to="/login">Login</Link>
+            <Link to="/about">Login</Link>
+          
         </div>
       </div>
     </div>
