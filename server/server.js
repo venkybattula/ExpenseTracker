@@ -53,7 +53,11 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://expensetracker-frontend-g1wo.onrender.com',
+  credentials: true,
+}));
 
 // Basic health check route
 app.get('/', (req, res) => {
