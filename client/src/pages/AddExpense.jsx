@@ -46,7 +46,7 @@ const handleSubmit = async (e) => { // ✅ async added here
       });
       toast.success('✅ Expense Updated!');
     } else {
-      await axios.post(`https://expensetracker-1-e5sj.onrender.com/api/expenses/${id}`, formData, {
+      await axios.post(`https://expensetracker-1-e5sj.onrender.com/api/expenses`, formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success('✅ Expense Added & Email Sent!');
