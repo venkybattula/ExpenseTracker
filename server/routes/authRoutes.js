@@ -40,7 +40,7 @@ router.post('https://expensetracker-1-e5sj.onrender.com/api/auth/register', asyn
 });
 
 // @route    POST /api/auth/login
-router.post('/login', async (req, res) => {
+router.post('https://expensetracker-1-e5sj.onrender.com/api/auth/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
