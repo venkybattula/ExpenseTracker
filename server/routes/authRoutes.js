@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const authMiddleware = require('../middleware/authMiddleware');
 
 // @route    POST /api/auth/register
-router.post('https://expensetracker-1-e5sj.onrender.com/api/auth/register', async (req, res) => {
+router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
@@ -40,7 +40,7 @@ router.post('https://expensetracker-1-e5sj.onrender.com/api/auth/register', asyn
 });
 
 // @route    POST /api/auth/login
-router.post('https://expensetracker-1-e5sj.onrender.com/api/auth/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
