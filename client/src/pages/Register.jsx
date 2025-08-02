@@ -123,7 +123,8 @@ const Register = () => {
         {error && <p style={{ color: 'red' }}>{error}</p>}
 
         <p className="login-redirect">
-          Already have an account? <Link to="/login">Login</a>
+         Already have an account? <Link to="/login">Login</Link>
+
         </p>
       </div>
     </div>
