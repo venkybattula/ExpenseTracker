@@ -23,7 +23,7 @@ try {
 }
 
 try {
-  app.use('/api/expenses', require('./routes/expensesRoutes'));
+  app.use('/api/expenses', require('./routes/expenseRoutes'));
 } catch (error) {
   console.error('Error loading expense routes:', error.message);
 }
