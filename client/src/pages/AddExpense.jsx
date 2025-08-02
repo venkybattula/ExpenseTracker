@@ -20,7 +20,7 @@ const AddExpense = () => {
 console.log(token);
   const fetchExpenses = useCallback(async () => {
     try {
-      const res = await axios.get(`https://expensetracker-1-e5sj.onrender.com/api/auth/expenses`, {
+      const res = await axios.get(`https://expensetracker-1-e5sj.onrender.com/api/expenses`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setExpenses(res.data);
